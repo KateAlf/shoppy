@@ -21,6 +21,7 @@
     "gulp": "3.9.1",
     "gulp-contrib-clean": "0.0.2",
     "gulp-contrib-copy": "^0.1.2",
+    "gulp-file-include": "^0.13.7",
     "gulp-imagemin": "^3.0.2",
     "gulp-plumber": "1.1.0",
     "gulp-postcss": "^6.1.0",

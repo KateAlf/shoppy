@@ -6,13 +6,15 @@ var plumber = require("gulp-plumber");
 var postcss = require("gulp-postcss");
 var cssnext = require("postcss-cssnext");
 var precss = require("precss");
-var atImport = require("postcss-import");
+// var atImport = require("postcss-import");
 var mqpacker = require("css-mqpacker");
 var cssnano = require("cssnano");
 var postcsscenter = require("postcss-center");
 var stylelint = require("stylelint");
 var stylefmt = require("stylefmt");
 var postcsssorting = require("postcss-sorting");
+
+var fileinclude = require('gulp-file-include');
 
 var imagemin = require("gulp-imagemin");
 var svgmin = require("gulp-svgmin");
@@ -26,7 +28,7 @@ gulp.task("style", function () {
   var processors = [
     cssnext,
     precss,
-    atImport,
+    // atImport,
     postcsscenter,
     postcsssorting,
     mqpacker ({
@@ -37,6 +39,15 @@ gulp.task("style", function () {
   return gulp.src("src/*.css")
     .pipe(postcss(processors))
     .pipe(gulp.dest("dest"));
+});
+
+gulp.task('fileinclude', function() {
+  gulp.src(['src/index.html'])
+    .pipe(fileinclude({
+      prefix: '@@',
+      basepath: '@file'
+    }))
+    .pipe(gulp.dest('./'));
 });
 
 gulp.task("images", function () {
@@ -79,6 +90,7 @@ gulp.task("copy", function () {
 
 gulp.watch("src/*.css", ["style"]);
 gulp.watch("dest/*.css").on("change", server.reload);
+gulp.watch("src/**/*.html", ["fileinclude"]);
 gulp.watch("*.html").on("change", server.reload);
 gulp.watch("img/*").on("change", server.reload);
 
