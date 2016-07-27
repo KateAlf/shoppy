@@ -1,0 +1,46 @@
+@import 'vendor/normalize.css';
+
+/* Testing autoprefixer */
+.autoprefixer {
+  display: flex;
+}
+
+/* Testing cssnext */
+.cssnext {
+  background: color(red alpha(-10%));
+}
+
+/* Testing precss */
+.precss {
+  @if 3 < 5 {
+    background: green;
+  } @else {
+    background: blue;
+  }
+}
+
+.welcome {
+  font-size: 40px;
+  font-weight: 500;
+  text-transform: uppercase;
+  line-height: 42px;
+  display: inline-block;
+  margin-bottom: 80px;
+  padding-top: 25px;
+  width: 700px;
+}
+
+.goodbye {
+  font-size: 40px;
+  font-weight: 500;
+  text-transform: uppercase;
+  line-height: 42px;
+  display: inline-block;
+  margin-bottom: 80px;
+  padding-top: 25px;
+  width: 700px;
+}
+
+.hello {
+  color: orange;
+}

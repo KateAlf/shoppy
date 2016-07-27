@@ -1,0 +1,46 @@
+{
+  "name": "Shoppy",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Internet Store Website",
+  "author": "KateAlf",
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:KateAlf/shoppy.git"
+  },
+  "bugs": {
+    "url": "https://github.com/KateAlf/shoppy/issues"
+  },
+  "homepage": "https://github.com/KateAlf/shoppy/",
+  "devDependencies": {
+    "autoprefixer": "^6.3.7",
+    "browser-sync": "2.11.1",
+    "css-mqpacker": "^5.0.1",
+    "cssnano": "^3.7.3",
+    "editorconfig-tools": "0.1.1",
+    "gulp": "3.9.1",
+    "gulp-contrib-clean": "0.0.2",
+    "gulp-contrib-copy": "^0.1.2",
+    "gulp-imagemin": "^3.0.2",
+    "gulp-plumber": "1.1.0",
+    "gulp-postcss": "^6.1.0",
+    "gulp-sass": "2.2.0",
+    "gulp-svgmin": "^1.2.2",
+    "imagemin": "^5.2.2",
+    "postcss-center": "^1.0.0",
+    "postcss-cssnext": "^2.7.0",
+    "postcss-import": "^8.1.2",
+    "postcss-sorting": "^1.6.1",
+    "precss": "^1.4.0",
+    "stylefmt": "^4.2.0",
+    "stylelint": "^7.0.3"
+  },
+  "scripts": {
+    "test": "editorconfig-tools check *",
+    "build": "gulp build",
+    "start": "gulp serve"
+  },
+  "engines": {
+    "node": "^5.0.0"
+  }
+}
